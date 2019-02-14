@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Home, Kategori
+from .models import Login
 
 # Register your models here.
-my_model = [Home, Kategori]
+my_model = Login
 admin.site.register(my_model)

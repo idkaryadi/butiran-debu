@@ -1,0 +1,96 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>tomato</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href= "{% static 'css/style.css' %}">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script> -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <header>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <a href="#">
+                            <div class="box-100 maroon-box">
+                            <strong>tomato</strong>
+                            </div>
+                        </a>
+                        <div>
+                        <span class="tagline">Find the best restaurants, cafés, and bars in Malang</span>
+                            </div>
+                        <form class="form-inline my-2 my-lg-0 justify-content-center">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+        </header>
+        
+        <section>
+            <div class="container-fluid">
+                <h2>Category</h2>
+                    <span>Explore curated lists of top restaurants, cafes, pubs, and bars in Malang, based on trends</span>
+                <div class="row">
+                    {% for data in homes%}
+                    <div class="col-md-4">
+                        <a href="{% url 'cat_detail' post_id=data.id %}"> 
+                        <div class="box-350">
+                        <img class="imgcategory h-100" src="../../static/images/{{data.images}}">
+                        <span class="namecategory">{{data.kategori_resto}}</span> 
+                        </div>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>        
+        </section>
+
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3">
+                        <span class="judulfooter"><strong>About tomato</strong></span><br>
+                        <span>About Us</span><br>
+                        <span>Culture</span><br>
+                        <span>Blog</span><br>
+                        <span>Careers</span><br>
+                        <span>Contact</span><br>
+                    </div>
+                    <div class="col-md-3">
+                        <span class="judulfooter"><strong>For Foodies</strong></span><br>
+                        <span>Code of Conduct</span><br>
+                        <span>Community</span><br>
+                        <span>Verified Users</span><br>
+                        <span>Blogger Help</span><br>
+                        <span>Developers</span><br>
+                        <span>Mobile Apps</span><br>
+                    </div>
+                    <div class="col-md-3">
+                        <span class="judulfooter"><strong>For Restaurants</strong></span><br>
+                        <span>Add a Restaurant</span><br>
+                        <span>Claim your Listing</span><br>
+                        <span>Business App</span><br>
+                        <span>Business Owner Guidelines</span><br>
+                        <span>Business Blog</span><br>
+                    </div>
+                    <div class="col-md-3">
+                        <span class="judulfooter"><strong>Advertise</strong></span><br>
+                        <span>Order</span><br>
+                        <span>Book</span><br>
+                        <span>Trace</span><br>
+                        <span>Hyperpure</span><br>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

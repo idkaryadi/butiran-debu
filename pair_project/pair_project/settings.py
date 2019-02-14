@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'home',
     'kategori',
     'resto',
+    'login',
+    'createaccount',
 ]
 
 MIDDLEWARE = [
