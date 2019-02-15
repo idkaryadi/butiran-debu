@@ -1,0 +1,57 @@
+{% extends 'resto/template.html' %}
+{% load static %}
+
+{% block menu %}
+    <div>
+        <!-- <pilihan>pilihan</pilihan> -->
+        <div>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+            <a class="nav-link " href="{% url 'restorant' %}">About</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link active" href="{% url 'menu' %}">Menu</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'reservasi' %}">Reservasi</a>
+            </li>
+        </ul>
+        <!-- end pilhan -->
+        </div>
+    </div>
+
+<body>
+    <div class="row">
+        <div class="col-12">
+            <div class="menu-segment">
+                <div class="default-section-title" style="margin: center">
+                    <h2>Bakso Bakar "Pak Man"</h2>
+                    <div class="clear"></div>
+            </div>
+        </div>
+                
+        <div class="col-12">
+            <div class="foto-menu-container">
+                <div class="menu-image">
+                    <img src="{% static 'img/menu-baksobakar.jpg' %}" style="height: 500px; width: 500px" alt="">
+                </div>
+            </div>
+        </div>
+                
+            <div class="col-12"></div>
+                <div class="penjelasan">
+                <h5>Physically collected from restaurant / Received over email</h5>
+                <h6>Prices subject to change without prior notice. Please check
+                    prices with the restaurant before visiting or ordering.</h6>
+                <p>Menu (including prices) for Bakso Bakar Hot may have changed since
+                    the last time the website was updated. Zomato.com does not guarantee
+                    prices or the availability of menu items at Bakso Bakar Hot. Bakso Bakar
+                    Hot menu in image format shown on this website has been digitised by Zomato.com.
+                    Customers are free to download and save these images, but not use these digital
+                    files (watermarked by the Zomato logo) for any commercial purpose,
+                    without prior written permission of Zomato</p>
+                </div>
+            </div>
+    </div>
+</body>
+{% endblock %}

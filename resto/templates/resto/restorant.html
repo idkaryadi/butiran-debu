@@ -1,0 +1,112 @@
+{% extends 'resto/template.html' %}
+{% load static %}
+
+{% block menu %}
+    <body>
+        <div>
+            <!-- <pilihan>pilihan</pilihan> -->
+            <div>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                <a class="nav-link active" href="{% url 'restorant' %}">About</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'reservasi' %}">Reservasi</a>
+                </li>
+            </ul>
+            <!-- end pilhan -->
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row" style="margin-top: 20px">
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                    <h6>Bakso bakar yang paling enak adalah Bakso Bakar Pak Man yang merupakan
+                        salah satu pelopor kuliner bakso bakar di Malang.</h6>
+                    <h6>Buka dari hari Minggu hingga hari Jum'at, jam 08:00 hingga 23:00</h6>
+                    <h6>Nomor Telepon: 081314556677</h6>
+                </div>
+
+                <div class="col-md-5">
+                    <h6>Info lain:</h6>
+                    <h6>Pesan antar</h6>
+                    <h6>Bawa pulang</h6>
+                    <h6>Tidak tersedia minuman berAkohol</h6>
+                    <h6>Tempat makan didalam dan diluar ruangan</h6>
+                </div>
+                <div class="col-md2"></div>
+            </div>
+        </div>
+    
+
+        <div class="container-fluid">
+            <div class="row" style="margin-top: 20px">
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                
+            
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid">
+            <h5>Review</h5><br>
+            <div class="row">
+                <div class="row-review">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-3">
+                        <img src="{% static 'img/def_face.jpg' %}" class="img img-rounded img-fluid"/>
+                        <h6 class="text-secondary text-center">15 Minutes Ago</h6>
+                    </div>
+
+                    <div class="col-md-3">
+                    <p>
+                        <a class="float-left" href="#"><strong>Mantul</strong></a>
+                        <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                    </p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-4"></div>
+                        <p>Bakso bakarnya enak tenan ! bikin ketagihan ! Tempatnya bersih dan nyaman. Sangat rekomended !</p>
+                            <a class="float-right btn btn-outline-primary ml-2"> <i class="fa fa-reply"></i> Reply</a>
+                            <a class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> Like</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="row-review">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2">
+                        <img src="{% static 'img/def_face.jpg' %}" class="img img-rounded img-fluid"/>
+                        <h6 class="text-secondary text-center">1 week Ago</h6>
+                    </div>
+
+                    <div class="col-md-2">
+                    <p>
+                        <a class="float-left" href="#"><strong>Foody Moddy</strong></a>
+                        <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                    </p>
+                    </div>
+                    <div class="clearfix"></div>
+                        <div class="col-md-2"></div>
+                            <p>Dari sekian bakso bakar yang aku coba, cuman bakso bakar "Pak Man" yang bikin aku ingin balik lagi kesini ! Yang belum pernah nyobain hati-hati kecanduan</p>
+                                <a class="float-right btn btn-outline-primary ml-2"> <i class="fa fa-reply"></i> Reply</a>
+                                <a class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> Like</a>
+                            </p>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+{% endblock %}

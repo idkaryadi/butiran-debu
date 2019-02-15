@@ -1,0 +1,101 @@
+{% extends 'resto/template.html' %}
+{% load static %}
+
+{% block menu %}
+    <body>
+        <div>
+            <!-- <pilihan>pilihan</pilihan> -->
+            <div>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                <a class="nav-link " href="{% url 'restorant' %}">About</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="{% url 'reservasi' %}">Reservasi</a>
+                </li>
+            </ul>
+            <!-- end pilhan -->
+            </div>
+        </div>
+
+        <form>
+            <div class="kotak-form">
+                <div class="form-group">
+                    <label for="inputAddress">Nama</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="makan enak">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="makanenak@gmail.com">
+                    </div>
+                    <div class="form-group col-md-6">
+                    <label for="inputPassword4">Kata sandi</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="qwerty123">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputAddress">Tanggal</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="15022019">
+                </div>
+
+                <div class="form-group">
+                    <label for="inputAddress2">Jumlah</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="dua atau berkelompok">
+                </div>
+
+                <div class="form-row">
+                    <label for="inputAddress2">Pesanan</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="3 porsi Bakso Bakar dan 2 Es Teh">
+                </div><br>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                    <label for="inputCity">DP</label>
+                    <input type="text" class="form-control" id="inputCity" placeholder="Rp.50.000,-">
+                    </div>
+                    <!-- <div class="form-group col-md-6">
+                        <label for="inputAddress2">Metode Pembayaran</label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Debitcard">
+                    </div>
+                </div> -->
+
+                <!-- <form class="form-row"> -->
+                    <div class="form-group col-md-6">
+                    <label class="" for="inlineFormCustomSelectPref">Metode Pembayaran</label>
+                    <select class="custom-select" id="inlineFormCustomSelectPref">
+                        <option style="background-color: white" selected>Choose...</option>
+                        <option style="background-color: white" value="1">Debitcard</option>
+                        <option style="background-color: white" value="2">Creditcard</option>
+                    </select>
+                </div>
+
+                <!-- <div class="form-row">
+                    <div class="form-check" style="margin-right: 2px">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">Saya yakin !</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-check">
+            <button type="submit" class="btn btn-primary">Pesan</button>
+                </div> -->
+
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">Saya yakin !</label>
+                    </div>
+                    <div class="form-check">
+                    <button type="submit" class="btn btn-primary">Pesan</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
+    {%endblock%}
