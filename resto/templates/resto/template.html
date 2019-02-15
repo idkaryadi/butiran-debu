@@ -16,17 +16,30 @@
     <body>
 
         <header>
-            <div>
-                <div class="h-city-main p-relative" id="zimagery-container">
-                <div class="logo">
-                    <a class="logo--header" href="">
-                    <img class="logo-tomato" src="" alt="" />
-                </a>
-                </div>
-                    <h1 class="tomato2">Bakso Bakar Pak Man</h1>
-                    <div class="wrapper"></div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                    <div class="h-city-main p-relative" id="zimagery-container">
+                        <div class="logo" style="margin-left: 300px; margin-right: 300px">
+                            <a class="logo--header" href="">
+                            <img class="" style="height: 150px; width: 150px" src="{% static 'img/Bakso-Bakar-Malang.jpg' %}" alt=""/>
+                            </a>
+                        </div>
+                    </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-5">
+                        <h4 class="tomato2">Bakso Bakar Pak Man</h4>
+                        <div class="wrapper"></div>
+                    </div>
+                    <div class="col-md-3"></div>
                 </div>
             </div>
+
         </header>
 
         {% block menu %}
