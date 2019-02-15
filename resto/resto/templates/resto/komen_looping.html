@@ -1,0 +1,20 @@
+{% extends 'resto/template.html' %}
+{% load static %}
+
+{% block menu %}
+    {% for komen_review in restorant %}
+    <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2 center"></div>
+                <div class="col-lg-8 col-md-8 col-sm-8 center">
+                    <div class="komen-image">
+                        <img src="{% static 'img/menu-baksobakar.jpg' %}" alt="">
+                        <br>
+                        <span id="title"><b>{{ boxkomen.name }}</b></span>
+                        <br/>
+                        <p class="isikonten">{{boxkomen.isi}}</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
